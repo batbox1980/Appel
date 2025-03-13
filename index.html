@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Appel Voyage Allemagne</title>
+  
+  <!-- Lien vers le manifest pour la PWA -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Meta pour indiquer que la PWA peut être “installable” -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#005a8f">
+  
+  <!-- Lien vers la feuille de style -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Collège Notre Dame - Voyage Allemagne</h1>
+    <select id="context-select">
+      <option>Montée dans le bus (départ)</option>
+      <option>Pause déjeuner</option>
+      <option>Visite du musée</option>
+      <!-- Ajoute autant de moments que tu veux -->
+    </select>
+    <input type="text" id="search-input" placeholder="Rechercher un élève...">
+  </header>
+
+  <nav>
+    <button class="accompagnateur-tab active" data-target="tab-dubois">M. Dubois</button>
+    <button class="accompagnateur-tab" data-target="tab-martin">Mme Martin</button>
+    <button class="accompagnateur-tab" data-target="tab-bernard">M. Bernard</button>
+    <button class="accompagnateur-tab" data-target="tab-leroy">Mme Leroy</button>
+  </nav>
+
+  <main>
+    <!-- Section de M. Dubois -->
+    <section id="tab-dubois" class="tab-content active">
+      <h2>Groupe 1A <span class="count">0/4</span></h2>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Dupont Emma"> Dupont Emma
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Lambert Thomas"> Lambert Thomas
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Moreau Clara"> Moreau Clara
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Petit Luca"> Petit Luca
+          </label>
+        </li>
+      </ul>
+
+      <h2>Groupe 1B <span class="count">0/4</span></h2>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Simon Léa"> Simon Léa
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Fournier Jules"> Fournier Jules
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Girard Chloé"> Girard Chloé
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-name="Bonnet Noah"> Bonnet Noah
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section de Mme Martin -->
+    <section id="tab-martin" class="tab-content">
+      <h2>Groupe 2A <span class="count">0/4</span></h2>
+      <!-- Liste d'élèves similaire -->
+    </section>
+
+    <!-- Etc. pour M. Bernard, Mme Leroy -->
+    <section id="tab-bernard" class="tab-content">
+      <!-- ... -->
+    </section>
+    <section id="tab-leroy" class="tab-content">
+      <!-- ... -->
+    </section>
+  </main>
+
+  <!-- Script principal -->
+  <script src="app.js"></script>
+</body>
+</html>
